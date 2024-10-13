@@ -30,9 +30,13 @@ function App() {
   }
 
   function handlerAddTodos(newTodo){
+    if(newTodo != ""){
     const newTodoList =[...todos,newTodo]
     persistData(newTodoList)
     setTodos(newTodoList)
+    }else{
+      alert("Canot be empty")
+    }
   }
   
 
